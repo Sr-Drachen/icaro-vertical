@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medios</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-logo-container">
+        <div class="rectangular-overlay"></div>
+        <div class="logo-wrapper">
+            <img class="header-logo" src="./img/logoicaro.svg" alt="header logo">
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide">
+                <img src="./img/bucle1.svg" alt="Slider Image 1">
+            </div>
+            <div class="slide">
+                <img src="./img/bucle1.svg" alt="Slider Image 2">
+            </div>
+        </div>
+    </div>
+    <div class="title">
+        <span class="arrow-title-container">
+            <a href="./lobby.html">
+                <img class="arrow-title" width="30" src="./img/arrow.svg" alt="Arrow">
+            </a>
+          </span>
+        <h1 class="title-features">MEDIOS</h1>
+    </div>
+    <div class="container-term">
+        <div class="desing-container">
+            <video autoplay muted loop>
+                <source src="./vid/vidmedios4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="desing-container">
+            <img src="./img/imgmediosdisney.svg" alt="medios Image">
+        </div>
+        <div class="desing-container">
+            <img src="./img/imgmedios.svg" alt="medios Image">
+        </div>
+        <div class="desing-container">
+            <video autoplay muted loop>
+                <source src="./vid/vidmedios1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="desing-container">
+            <video autoplay muted loop>
+                <source src="./vid/vidmedios3.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="desing-container">
+            <img src="./img/mediostext.svg" alt="medios text Image">
+            <video autoplay muted loop>
+                <source src="./vid/vidmedios2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="img-fixed">
+        <img src="./img/textmedios.svg" alt="fixed Image">
+    </div>
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-flex">  
+                <div class="footer-contacts-flex">
+                    <h3 class="logo logo-footer-position link" href="#">Contactanos</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-list list">
+                            <div class="footer-contact-item">
+                                <img class="footer-contact-image" src="./img/hand.svg" alt="icon hand">
+                                <h4 class="footer-link-contact link" href="#">www.icarodiseno.net</h4>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img class="footer-contact-image" src="./img/map.svg" alt="icon map">
+                                <h4 class="footer-link-contact link" href="#">Carrera 61 # 5B - 54, Bogotá D.C. Colombia</h4>
+                            </div>
+                            <div class="footer-contact-item">
+                                <img class="footer-contact-image" src="./img/whats.svg" alt="icon whats">
+                                <h4 class="footer-link-contact link" href="#">Área administrativa: 301 530 9751 | Área comercial: 300 855 5797</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>    
+        </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var speed = 5000;
+            var container = $('.container-term');
+            var videoContainers = $('.video-container');
+
+            function changeVideo() {
+                var firstVideo = videoContainers.first();
+                var secondVideo = videoContainers.eq(1);
+
+                firstVideo.appendTo(container);
+                secondVideo.appendTo(container);
+            }
+
+            setInterval(changeVideo, speed);
+        });
+    </script>
+</body>
+</html>
